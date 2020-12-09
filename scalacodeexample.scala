@@ -1,10 +1,21 @@
 object Test extends App{
 
-  var arrayList = List(1,2,3,4,5)
-  var sum = 0
+  def sumArray(len: Int, contents: List[Int]): Unit =
+  {
+    var sum = 0
 
-  for (i <- arrayList) sum += i
-  println(sum)
+    //test1
+    if(len > 1000) println("Len variable must be less than or equal to 1000")
+    
+    else
+      for (i <- contents) sum += i
+      println(sum)
+  
+  }
+  sumArray(5, List(7,9,4,3,10))
   
 }
+
+
+
 
